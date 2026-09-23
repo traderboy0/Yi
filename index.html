@@ -3,147 +3,385 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>Trade with Munnf - Learning Community</title>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+*{
+    box-sizing:border-box;
+}
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#06131d,#073b3b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px 12px;
+    color:#fff;
+}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+.card{
+    width:100%;
+    max-width:830px;
+    min-height:1380px;
+    background:#07111f;
+    border:2px solid rgba(255,255,255,.12);
+    border-radius:42px;
+    padding:58px 42px 45px;
+    text-align:center;
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55),
+        0 0 40px rgba(0,255,200,.08);
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+/* LOGO */
+.logo{
+    width:110px;
+    height:110px;
+    margin:0 auto 28px;
+    border-radius:50%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:50%;
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+h1{
+    margin:0;
+    font-size:42px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
 
-  .feature-item:last-child { border-bottom: none; }
+.description{
+    margin:38px auto 48px;
+    max-width:720px;
+    color:#d9dee7;
+    font-size:27px;
+    line-height:1.45;
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+/* FEATURES */
+.features{
+    background:#131f2c;
+    border-radius:25px;
+    padding:28px 30px;
+    margin:0 auto 38px;
+    text-align:left;
+}
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+.feature{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-size:26px;
+    color:#f2f4f7;
+    margin:17px 0;
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+.feature:first-child{
+    margin-top:0;
+}
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+.feature:last-child{
+    margin-bottom:0;
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+/* TELEGRAM BUTTON */
+.telegram-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    width:100%;
+    padding:25px 20px;
+    border-radius:25px;
+    background:#ffdc21;
+    color:#080d12;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:800;
+    box-shadow:
+        0 0 25px rgba(255,220,33,.45),
+        0 12px 30px rgba(0,0,0,.35);
+    transition:.2s;
+}
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+.telegram-btn:hover{
+    transform:translateY(-2px);
+}
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.telegram-icon{
+    font-size:45px;
+}
+
+/* TIMER */
+.timer-text{
+    margin-top:45px;
+    color:#d9dee7;
+    font-size:25px;
+    line-height:1.4;
+}
+
+.timer{
+    margin-top:12px;
+    color:#ffdc21;
+    font-size:44px;
+    font-weight:800;
+}
+
+.sub-text{
+    margin-top:22px;
+    color:#d9dee7;
+    font-size:23px;
+}
+
+/* CANCEL BUTTON */
+.cancel-btn{
+    margin-top:30px;
+    padding:16px 28px;
+    border-radius:14px;
+    border:2px solid #3a4653;
+    background:transparent;
+    color:#f0f2f5;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    margin-top:55px;
+    color:#aeb8c6;
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    body{
+        padding:12px;
+    }
+
+    .card{
+        min-height:auto;
+        padding:38px 20px 30px;
+        border-radius:30px;
+    }
+
+    .logo{
+        width:85px;
+        height:85px;
+        margin-bottom:20px;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    .description{
+        margin:27px auto 30px;
+        font-size:17px;
+        line-height:1.55;
+    }
+
+    .features{
+        padding:20px 18px;
+        border-radius:20px;
+        margin-bottom:30px;
+    }
+
+    .feature{
+        gap:12px;
+        font-size:17px;
+        margin:15px 0;
+    }
+
+    .telegram-btn{
+        padding:19px 12px;
+        border-radius:20px;
+        font-size:20px;
+        gap:12px;
+    }
+
+    .telegram-icon{
+        font-size:31px;
+    }
+
+    .timer-text{
+        margin-top:34px;
+        font-size:17px;
+    }
+
+    .timer{
+        font-size:36px;
+    }
+
+    .sub-text{
+        font-size:16px;
+        margin-top:16px;
+    }
+
+    .cancel-btn{
+        margin-top:24px;
+        padding:13px 20px;
+        font-size:15px;
+    }
+
+    .disclaimer{
+        margin-top:38px;
+        font-size:12px;
+        line-height:1.6;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
 
-  <h1>Munaaf</h1>
+    <!-- LOGO - TOP -->
+    <div class="logo">
+        <img
+            src="https://i.ibb.co/5WQQBHZz/IMG-20260805-194222-865.jpg"
+            alt="Trade with Munnf Logo"
+        >
+    </div>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+    <!-- TITLE -->
+    <h1>Trade with Munnf</h1>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+    <!-- DESCRIPTION -->
+    <div class="description">
+        Welcome to our stock market community! Join our free
+        Telegram channel for market updates and trading
+        education.
+    </div>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+    <!-- FEATURES -->
+    <div class="features">
 
-  <p class="hindi-quote">     ,     </p>
+        <div class="feature">
+            📊
+            <span>Stock Market Updates</span>
+        </div>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+        <div class="feature">
+            📈
+            <span>Trading Education</span>
+        </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
+        <div class="feature">
+            💹
+            <span>Market Discussions</span>
+        </div>
+
+    </div>
+
+    <!-- TELEGRAM BUTTON -->
+    <a
+        href="https://t.me/+KmunsNqTavg1ZDg1"
+        class="telegram-btn"
+        id="telegramBtn"
+    >
+        <span class="telegram-icon">➤</span>
+        <span>Join Our Free Telegram</span>
+    </a>
+
+    <!-- TIMER -->
+    <div class="timer-text">
+        ⏳ Automatic Telegram redirect in
+    </div>
+
+    <div class="timer" id="timer">
+        20 seconds
+    </div>
+
+    <div class="sub-text">
+        Join now or cancel the timer.
+    </div>
+
+    <!-- CANCEL -->
+    <button
+        class="cancel-btn"
+        onclick="cancelRedirect()"
+        id="cancelBtn"
+    >
+        Cancel automatic redirect
+    </button>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        Educational purposes only. Stock market investments involve
+        risk. This page does not guarantee profits.
+    </div>
+
 </div>
+
+<script>
+
+let seconds = 20;
+let cancelled = false;
+
+const telegramLink = "https://t.me/+KmunsNqTavg1ZDg1";
+
+const timerElement = document.getElementById("timer");
+const cancelButton = document.getElementById("cancelBtn");
+
+const countdown = setInterval(function(){
+
+    if(cancelled){
+        clearInterval(countdown);
+        return;
+    }
+
+    seconds--;
+
+    timerElement.textContent = seconds + " seconds";
+
+    if(seconds <= 0){
+
+        clearInterval(countdown);
+
+        if(!cancelled){
+            window.location.href = telegramLink;
+        }
+    }
+
+},1000);
+
+
+function cancelRedirect(){
+
+    cancelled = true;
+
+    clearInterval(countdown);
+
+    timerElement.textContent = "Redirect cancelled";
+
+    timerElement.style.color = "#ffffff";
+
+    cancelButton.textContent = "Automatic redirect cancelled";
+
+    cancelButton.disabled = true;
+
+    cancelButton.style.opacity = "0.6";
+    cancelButton.style.cursor = "default";
+}
+
+</script>
 
 </body>
 </html>
